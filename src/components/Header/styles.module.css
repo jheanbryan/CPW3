@@ -1,0 +1,34 @@
+.header {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: rgb(47, 54, 64);
+  border-bottom: 2px solid #fff;
+}
+
+.backButton {
+  width: 24px;
+  filter: invert(1);
+  margin-right: 10px;
+}
+
+.backButton img {
+  width: 100%;
+}
+
+.appTitle {
+  font-family: "bold";
+  font-size: 24px;
+}
+
+.thumb {
+  width: 36px;
+  border-radius: 50%;
+  margin: 0 20px 0 auto;
+}
+
+.logout {
+  width: 24px;
+  filter: invert(1);
+  cursor: pointer;
+}
