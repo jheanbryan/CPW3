@@ -4,16 +4,16 @@ import Contact from "../pages/Contact";
 import NotFound from "../pages/NotFound";
 
 export const routes: RouteObject[] = [
-    {
-        path: '/',
-        element: <Home />
-    },
-    {
-        path: '/contact',
-        element: <Contact />
-    },
-    {
-        path: '/*',
-        element: <NotFound />
-    }
+  {
+    path: "/",
+    element: <Home />,
+  },
+  {
+    path: "/contact",
+    element: <Contact />,
+  },
+  {
+    path: "*",
+    element: <NotFound />,
+  },
 ];

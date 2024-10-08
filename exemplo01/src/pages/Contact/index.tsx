@@ -1,3 +1,11 @@
-const Contact = () => <h1>Contact</h1>;
+import Header from "../../components/Header";
+
+const Contact = () => {
+  return (
+    <div>
+      <Header title="Dados do contato" backPage="/" />
+    </div>
+  );
+};
 
 export default Contact;
