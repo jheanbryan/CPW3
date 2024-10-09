@@ -1,0 +1,35 @@
+.contactCard {
+    background-color: #6b7280;
+    display: flex;
+    width: 40%;
+    border-radius: 5px;
+}
+
+.thumb {
+    width: 20%;
+    padding: 10px;
+}
+
+.thumb img {
+    width: 100%;
+}
+
+.info {
+    width: 80%;
+    padding: 10px;
+}
+
+.metadata {
+    margin-bottom: 5px;
+}
+
+.key {
+    font-family: "bold";
+    font-size: 1rem;
+    margin-right: 5px;
+}
+
+.value {
+    font-family: "regular";
+    font-size: 1rem;
+}

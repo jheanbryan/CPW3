@@ -1,6 +1,9 @@
 import { useState } from "react";
+
+import styles from "./styles.module.css";
 import Header from "../../components/Header";
-import Contact from "../Contact";
+import { Contact } from "../../models/Contact";
+import ContactCard from "../../components/ContactCard";
 
 const Home = () => {
   const [name, setName] = useState ('');
@@ -16,14 +19,14 @@ const Home = () => {
     const contact = new Contact(name, phone, email);
     contact.address = address || undefined;
     contact.birthday = birthday ? new Date(birthday) : undefined; 
-    setContacts([contact, ...contact])
+    setContacts([contact, ...contacts])
   };
   
   return (
     <div>
       <Header title="Início" />
 
-      <form onSubmit={saveContact} className="form">
+      <form onSubmit={saveContact} className={styles.contactForm}>
         <label htmlFor="name">Nome: </label>
         <input
           type="text" 
@@ -78,13 +81,17 @@ const Home = () => {
             setBirthday(e.target.value)
         })}/>
 
-          <input type="button" value="Salvar"/>
+          <input type="submit" value="Salvar"/>
       </form>
 
-      {contacts.length > 0 && 
-        contacts.map((c, index) => {
-          <p key = {index}></p>
-        })}
+      {contacts.length > 0 && (
+        <div className={styles.contacts}>
+          {contacts.map((c, index) => (
+            <ContactCard key={index} contact={c} />
+          ))}
+        </div>
+      )}
+
     </div>
   );
 };
