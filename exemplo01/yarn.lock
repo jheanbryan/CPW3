@@ -417,6 +417,18 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
+"@react-input/core@^1.0.18":
+  version "1.0.18"
+  resolved "https://registry.yarnpkg.com/@react-input/core/-/core-1.0.18.tgz#a5089b6e29be6a99a1f40058b4ee4e783f19d0ae"
+  integrity sha512-P7OCPZkBU3TjwSkk6NBPvAM5k91NFjFw9HD6a0iuE1eADYjPnlxoDmdfP4icVPloryW2wlhVKb2S0LVrkDaFYQ==
+
+"@react-input/mask@^1.2.11":
+  version "1.2.11"
+  resolved "https://registry.yarnpkg.com/@react-input/mask/-/mask-1.2.11.tgz#a0f56dd265580908d2a9f1b0de8cf9e2496009fa"
+  integrity sha512-CakG0tSkDU9ZtvKTri1YQWoM6Y7UpMxrJPHkJfKroMOsVrPaGlc6eEeIv5pUHewQOJArVhG4sfbT1LPjplMUFg==
+  dependencies:
+    "@react-input/core" "^1.0.18"
+
 "@remix-run/router@1.19.2":
   version "1.19.2"
   resolved "https://registry.npmjs.org/@remix-run/router/-/router-1.19.2.tgz"
@@ -829,6 +841,11 @@ electron-to-chromium@^1.5.28:
   version "1.5.32"
   resolved "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.5.32.tgz"
   integrity sha512-M+7ph0VGBQqqpTT2YrabjNKSQ2fEl9PVx6AK3N558gDH9NO8O6XN9SXXFWRo9u9PbEg/bWq+tjXQr+eXmxubCw==
+
+email-validator@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/email-validator/-/email-validator-2.0.4.tgz#b8dfaa5d0dae28f1b03c95881d904d4e40bfe7ed"
+  integrity sha512-gYCwo7kh5S3IDyZPLZf6hSS0MnZT8QmJFqYvbqlDZSbwdZlY6QZWxJ4i/6UhITOJ4XzyI647Bm2MXKCLqnJ4nQ==
 
 esbuild@^0.21.3:
   version "0.21.5"

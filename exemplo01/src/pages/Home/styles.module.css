@@ -57,6 +57,9 @@
     background-color: #6b7280;
     color: #fff;
   }
+  .contactForm input[type="submit"]:disabled{
+      background-color: #232930;
+  }
   .contacts {
     display: flex;
     flex-direction: column;
