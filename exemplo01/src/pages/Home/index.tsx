@@ -23,7 +23,9 @@ const Home = () => {
     contact.birthday = birthday ? new Date(birthday) : undefined; 
     setContacts([contact, ...contacts])
   };
-  
+
+  process.env
+
   const phoneRef = useMask({
     mask: '(__) ____-____',
     replacement: { _: /\d/ },
