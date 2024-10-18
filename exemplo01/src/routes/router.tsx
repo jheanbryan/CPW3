@@ -3,6 +3,7 @@ import Home from "../pages/Home";
 import Contact from "../pages/Contact";
 import NotFound from "../pages/NotFound";
 import Login from "../pages/Login";
+import ProtectedRoute from "../components/ProtectedRoute";
 
 export const routes: RouteObject[] = [
   {
@@ -11,14 +12,26 @@ export const routes: RouteObject[] = [
   },
   {
     path: "/Home",
-    element: <Home />,
+    element: (
+      <ProtectedRoute>
+        <Home />
+      </ProtectedRoute>
+    ),
   },
   {
     path: "/contact",
-    element: <Contact />,
+    element: (
+      <ProtectedRoute>
+        <Contact />
+      </ProtectedRoute>
+    ),
   },
   {
     path: "*",
-    element: <NotFound />,
+    element: (
+      <ProtectedRoute>
+        <NotFound />
+      </ProtectedRoute>
+    ),
   },
 ];
