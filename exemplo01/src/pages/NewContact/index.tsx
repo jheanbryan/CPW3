@@ -24,8 +24,6 @@ const NewContact = () => {
     setContacts([contact, ...contacts])
   };
 
-  process.env
-
   const phoneRef = useMask({
     mask: '(__) ____-____',
     replacement: { _: /\d/ },
@@ -46,7 +44,7 @@ const NewContact = () => {
 
   return (
     <div>
-      <Header title="Novo Contact"  backPage="/home"/>
+      <Header title="Novo Contato"  backPage="/home"/>
 
       <form onSubmit={saveContact} className={styles.contactForm}>
         <label htmlFor="name">Nome: </label>
