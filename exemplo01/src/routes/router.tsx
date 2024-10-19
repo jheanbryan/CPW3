@@ -4,6 +4,7 @@ import Contact from "../pages/Contact";
 import NotFound from "../pages/NotFound";
 import Login from "../pages/Login";
 import ProtectedRoute from "../components/ProtectedRoute";
+import Logout from "../pages/Logout";
 
 export const routes: RouteObject[] = [
   {
@@ -23,6 +24,14 @@ export const routes: RouteObject[] = [
     element: (
       <ProtectedRoute>
         <Contact />
+      </ProtectedRoute>
+    ),
+  },
+  {
+    path: "/logout",
+    element: (
+      <ProtectedRoute>
+        <Logout />
       </ProtectedRoute>
     ),
   },

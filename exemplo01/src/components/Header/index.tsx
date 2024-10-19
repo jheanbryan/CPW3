@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
+import { useContext } from "react";
 
 import styles from "./styles.module.css";
 import thumb from "../../assets/img/thumb.jpg";
 import logout from "../../assets/img/logout.png";
 import back from "../../assets/img/back.png";
+import { UserContext } from "../../context/UserContext";
 
 type Props = {
   title: string;
@@ -11,6 +13,8 @@ type Props = {
 };
 
 const Header = ({ title, backPage }: Props) => {
+  const { photoURL, name } = useContext(UserContext);
+
   return (
     <header className={styles.header}>
       {backPage && (
@@ -20,8 +24,11 @@ const Header = ({ title, backPage }: Props) => {
       )}
       <h1 className={styles.appTitle}>{title}</h1>
 
-      <img src={thumb} className={styles.thumb} alt="Thumbnail do usuário" />
-      <img src={logout} className={styles.logout} alt="Sair" />
+      <img src={photoURL} className={styles.thumb} alt={name} />
+
+      <Link to='logout'>
+        <img src={name} className={styles.logout} alt="Sair" />
+      </Link>
     </header>
   );
 };

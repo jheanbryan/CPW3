@@ -1,13 +1,13 @@
 import { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { RotatingLines, Grid } from 'react-loader-spinner';
+import { Grid } from 'react-loader-spinner';
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
 import styles from "./styles.module.css";
 import { UserContext } from "../../context/UserContext";
 import google from '../../assets/img/google.png';
 import { auth } from "../../config/firebase";
-
+  
 const Login = () => {
   const [loading, isLoading] = useState(false);
 
@@ -31,6 +31,9 @@ const Login = () => {
     const provider = new GoogleAuthProvider();
     isLoading(true)
 
+    //onsole.log(provider)
+    //console.log(auth)
+
     signInWithPopup(auth, provider)
       .then(async (results) => {
         const credential = GoogleAuthProvider.credentialFromResult(results);
@@ -53,7 +56,8 @@ const Login = () => {
 
       }).catch((err) => {
         const { code, message } = err;
-        console.log(code, message);
+        console.log(code);
+        console.log(message);
         isLoading(false);
       })
   };
