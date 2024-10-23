@@ -1,11 +1,12 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useMask } from '@react-input/mask';
 import EmailValidator from 'email-validator';
 
 import styles from "./styles.module.css";
 import Header from "../../components/Header";
 import { Contact } from "../../models/Contact";
-import ContactCard from "../../components/ContactCard";
+import { UserContext } from "../../context/UserContext";
+import { ContactService } from "../../services/ContactServices";
 
 const NewContact = () => {
   const [name, setName] = useState ('');
@@ -13,16 +14,21 @@ const NewContact = () => {
   const [email, setEmail] = useState ('');
   const [address, setAddress] = useState ('');
   const [birthday, setBirthday] = useState('');
-  const [contacts, setContacts] = useState<Contact[]>([]);
+  
+  const ownerEmail = useContext(UserContext).email;
+  const service = new ContactService();
+  
 
-  const saveContact = (e: React.FormEvent<HTMLFormElement>) => {
+  const saveContact = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const contact = new Contact(name, phone, email);
+    const contact = new Contact({ name, phone, email, ownerEmail });
     contact.address = address || undefined;
     contact.birthday = birthday ? new Date(birthday) : undefined; 
     setContacts([contact, ...contacts])
   };
+
+  process.env
 
   const phoneRef = useMask({
     mask: '(__) ____-____',
@@ -44,7 +50,7 @@ const NewContact = () => {
 
   return (
     <div>
-      <Header title="Novo Contact"  backPage="/home"/>
+      <Header title="Novo Contato"  backPage="/home"/>
 
       <form onSubmit={saveContact} className={styles.contactForm}>
         <label htmlFor="name">Nome: </label>
@@ -104,14 +110,6 @@ const NewContact = () => {
 
           <input type="submit" value="Salvar" disabled={areInputsInvalid()} />
       </form>
-
-      {contacts.length > 0 && (
-        <div className={styles.contacts}>
-          {contacts.map((c, index) => (
-            <ContactCard key={index} contact={c} />
-          ))}
-        </div>
-      )}
 
     </div>
   );

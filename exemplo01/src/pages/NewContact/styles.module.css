@@ -53,10 +53,7 @@
     padding: 10px 0;
     cursor: pointer;
   }
-  .contactForm input[type="submit"]:hover{
-    background-color: #6b7280;
-    color: #fff;
-  }
+
   .contactForm input[type="submit"]:disabled{
       background-color: #232930;
   }

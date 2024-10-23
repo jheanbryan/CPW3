@@ -4,6 +4,7 @@
   padding: 10px 20px;
   background-color: #2f3640;
   border-bottom: 2px solid #fff;
+  justify-content: space-between;
 }
 
 .backButton {
@@ -20,16 +21,24 @@
   font-family: "bold";
   font-size: 24px;
 }
-
-.btnNewContact {
-  background-color: #000;
-  padding: 5px 0;
-  border-radius: 10px;
+.containerUser{
+  display: flex;
+  align-items: center;
 }
 
 .btnNewContact {
+  background-color: #0f172a;
+  padding: 10px;
+  border-radius: 10px;
+  list-style: none;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.btnNewContact span {
   font-family: 'bold';
-  font-size: 26px;
+  font-size: 18px;
   margin-left: auto ;
 }
 
