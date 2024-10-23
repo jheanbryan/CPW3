@@ -24,8 +24,6 @@ const NewContact = () => {
     setContacts([contact, ...contacts])
   };
 
-  process.env
-
   const phoneRef = useMask({
     mask: '(__) ____-____',
     replacement: { _: /\d/ },
