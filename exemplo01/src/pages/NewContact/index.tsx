@@ -24,11 +24,16 @@ const NewContact = () => {
 
     const contact = new Contact({ name, phone, email, ownerEmail });
     contact.address = address || undefined;
-    contact.birthday = birthday ? new Date(birthday) : undefined; 
-    setContacts([contact, ...contacts])
+    contact.birthday = birthday ? new Date(birthday) : undefined;
+    
+    await service.save(contact);
+    
+    setName("");
+    setPhone("");
+    setEmail("");
+    setBirthday("");
+    setAddress("");
   };
-
-  process.env
 
   const phoneRef = useMask({
     mask: '(__) ____-____',
