@@ -1,0 +1,25 @@
+.container {
+  padding: 10px 0;
+  width: 60%;
+  margin: auto;
+}
+
+.container span {
+  color: #fff;
+  font-family: "bold";
+  font-size: 24px;
+  text-align: center;
+  padding: 10px;
+}
+
+.success {
+  background-color: #16a34a;
+}
+
+.warning {
+  background-color: #f59e0b;
+}
+
+.warning {
+  background-color: #dc2626;
+}

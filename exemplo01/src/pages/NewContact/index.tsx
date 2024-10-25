@@ -7,6 +7,8 @@ import Header from "../../components/Header";
 import { Contact } from "../../models/Contact";
 import { UserContext } from "../../context/UserContext";
 import { ContactService } from "../../services/ContactServices";
+import { Severity } from "../../enums/Saverity";
+import Message from "../../components/Message";
 
 const NewContact = () => {
   const [name, setName] = useState ('');
@@ -14,7 +16,9 @@ const NewContact = () => {
   const [email, setEmail] = useState ('');
   const [address, setAddress] = useState ('');
   const [birthday, setBirthday] = useState('');
-  
+  const [responseSeverity, setResponseSeverity] = useState(Severity.SUCESS);
+  const [ResponseMessage, setResponseMessage] = useState(false);
+
   const ownerEmail = useContext(UserContext).email;
   const service = new ContactService();
   
@@ -22,12 +26,27 @@ const NewContact = () => {
   const saveContact = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    setReponseMessage(false);
+
+    const existingContact = await service.findByOwnerEmailAndContactEmail(
+      ownerEmail,
+      email
+    );
+
     const contact = new Contact({ name, phone, email, ownerEmail });
     contact.address = address || undefined;
     contact.birthday = birthday ? new Date(birthday) : undefined;
     
-    await service.save(contact);
+    try{
+      await service.save(contact);
+      setResponseSeverity(Severity.SUCESS);
+
+    } catch (err){
+      setResponseSeverity(Severity.ERROR);
+    }
     
+    setResponseMessage(true);
+
     setName("");
     setPhone("");
     setEmail("");
@@ -116,6 +135,20 @@ const NewContact = () => {
           <input type="submit" value="Salvar" disabled={areInputsInvalid()} />
       </form>
 
+      {ResponseMessage && (
+        <Message 
+          severity={responseSeverity}
+          message={(() => {
+            if(responseSeverity === Severity.SUCESS)
+              return 'Contato salvo com sucesso!';
+            else if(responseSeverity === Severity.WARNING)
+              return 'Já existe um cotato com esse e-mail!';
+
+            return 'Ocorreu um erro ao tentar salvar o contato';
+            
+          })()}
+        />
+      )}
     </div>
   );
 };
