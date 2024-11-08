@@ -3,6 +3,7 @@ import {
   FirestoreDataConverter,
   QueryDocumentSnapshot,
   SnapshotOptions,
+  Timestamp,
  } from "firebase/firestore";
 
 export class Contact {
@@ -36,6 +37,10 @@ export const contactConverter: FirestoreDataConverter<Contact, DocumentData> = {
     options: SnapshotOptions
   ) => {
     const data = snapshot.data(options);
+    if (data.birthday) {
+      const t: Timestamp = data.birthday;
+      data.birthday = t.toDate();
+    }
     return new Contact(data);
   },
 };
