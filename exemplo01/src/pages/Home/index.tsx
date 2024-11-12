@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 
+import styles from "./styles.module.css";
 import Header from "../../components/Header";
 import { Contact } from "../../models/Contact";
 import { ContactService } from "../../services/ContactServices";
@@ -27,27 +28,31 @@ const Home = () => {
     <>
       <Header title="Início" />
 
-      <Circles
-        height="80"
-        width="80"
-        color="#fff"
-        ariaLabel="circles-loading"
-        wrapperStyle={{}}
-        wrapperClass=""
-        visible={loading}
-      />
+      <div className={styles.container}>
+        
+        <Circles
+          height="80"
+          width="80"
+          color="#fff"
+          ariaLabel="circles-loading"
+          wrapperStyle={{}}
+          wrapperClass=""
+          visible={loading}
+        />
 
-      {!loading && contacts.length > 0 && (
-        <>
-          <h1>Seus contatos</h1>
+        {!loading && contacts.length > 0 && (
+          <>
+            <h1>Seus contatos</h1>
 
-          {contacts.map((c) => (
-            <ContactCard key={c.email} contact={c} />
-          ))}
-        </>
-      )}
+            {contacts.map((c) => (
+              <ContactCard key={c.email} contact={c} />
+            ))}
+          </>
+        )}
 
-      {!loading && contacts.length === 0 && <p>Nenhum contato cadastrado</p>}
+        {!loading && contacts.length === 0 && <p>Nenhum contato cadastrado</p>}
+
+      </div>
     </>
   );
 };

@@ -1,5 +1,6 @@
 import {
 <<<<<<< HEAD
+<<<<<<< HEAD
     collection,
     doc,
     getDoc,
@@ -62,6 +63,8 @@ import {
     }
   }
 =======
+=======
+>>>>>>> a3cbbe443a6c22f6bef29ce96c1f054e36145b95
   collection,
   doc,
   getDoc,
@@ -109,7 +112,11 @@ export class ContactService {
       ref,
       where("ownerEmail", "==", ownerEmail),
       orderBy("name")
+<<<<<<< HEAD
     );
+=======
+    ).withConverter(contactConverter);;
+>>>>>>> a3cbbe443a6c22f6bef29ce96c1f054e36145b95
 
     const snapshot = await getDocs(q);
 
@@ -122,5 +129,9 @@ export class ContactService {
   private _generateId(ownerEmail: string, contactEmail: string) {
     return `${ownerEmail}|${contactEmail}`;
   }
+<<<<<<< HEAD
 }
 >>>>>>> 7d0a37d (refact/updates in code)
+=======
+}
+>>>>>>> a3cbbe443a6c22f6bef29ce96c1f054e36145b95
