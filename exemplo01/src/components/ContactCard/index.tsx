@@ -1,12 +1,18 @@
+import { Link } from "react-router-dom";
+import { useState } from "react";
+
 import styles from "./styles.module.css";
 import { Contact } from "../../models/Contact";
 import noimage from "../../assets/img/noimage.png";
+import pencil from "../../assets/img/pencil.png";
+import trash from "../../assets/img/trash.png";
 
 type Props = {
   contact: Contact;
+  openModal: () => void;
 };
 
-const ContactCard = ({ contact }: Props) => {
+const ContactCard = ({ contact, openModal }: Props) => {
   return (
     <div className={styles.contactCard}>
       <div className={styles.thumb}>
@@ -44,6 +50,23 @@ const ContactCard = ({ contact }: Props) => {
             </span>
           </div>
         )}
+      </div>
+
+      <div className={styles.actions}>
+        <Link
+          className={`${styles.actionButton} ${styles.editButton}`}
+          to="/newcontact"
+          state={{ contact }}
+        >
+          <img src={pencil} alt="Editar dados do contato" />
+        </Link>
+
+        <button
+          className={`${styles.actionButton} ${styles.deleteButton}`}
+          onClick={() => openModal()}
+        >
+          <img src={trash} alt="Remover contato" />
+        </button>
       </div>
     </div>
   );

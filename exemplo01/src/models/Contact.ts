@@ -1,9 +1,10 @@
-import { 
+import {
   DocumentData,
   FirestoreDataConverter,
   QueryDocumentSnapshot,
   SnapshotOptions,
- } from "firebase/firestore";
+  Timestamp,
+} from "firebase/firestore";
 
 export class Contact {
   name: string = "";
@@ -12,12 +13,8 @@ export class Contact {
   address?: string;
   birthday?: Date;
   ownerEmail: string = "";
-
-
+  
   constructor(obj: Partial<Contact>) {
-    // this.name = name;
-    // this.phone = phone;
-    // this.email = email;
     Object.assign(this, obj);
   }
 }
@@ -36,6 +33,10 @@ export const contactConverter: FirestoreDataConverter<Contact, DocumentData> = {
     options: SnapshotOptions
   ) => {
     const data = snapshot.data(options);
+    if (data.birthday) {
+      const t: Timestamp = data.birthday;
+      data.birthday = t.toDate();
+    }
     return new Contact(data);
   },
 };

@@ -1,15 +1,15 @@
 .container {
   padding: 10px 0;
-  width: 60%;
+  width: 40%;
   margin: auto;
+  border-radius: 10px;
+  text-align: center;
 }
 
 .container span {
   color: #fff;
   font-family: "bold";
-  font-size: 24px;
-  text-align: center;
-  padding: 10px;
+  font-size: 1.5rem;
 }
 
 .success {
@@ -20,6 +20,13 @@
   background-color: #f59e0b;
 }
 
-.warning {
+.error {
   background-color: #dc2626;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 80%;
+    box-sizing: border-box;
+  }
 }

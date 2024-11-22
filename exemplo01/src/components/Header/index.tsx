@@ -1,11 +1,11 @@
-import { Link } from "react-router-dom";
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 
 import styles from "./styles.module.css";
-import back from "../../assets/img/back.png";
 import logout from "../../assets/img/logout.png";
+import back from "../../assets/img/back.png";
+import newContact from "../../assets/img/new.png";
 import { UserContext } from "../../context/UserContext";
-import noimage from '../../assets/img/noimage.png'
 
 type Props = {
   title: string;
@@ -22,21 +22,18 @@ const Header = ({ title, backPage }: Props) => {
           <img src={back} alt="Voltar" />
         </Link>
       )}
-
       <h1 className={styles.appTitle}>{title}</h1>
 
-      <div className={styles.containerUser}>
-        <Link to='/newcontact' className={styles.btnNewContact}>
-          <span>Novo Contato</span>
-        </Link>
+      <Link to="/newcontact" className={styles.btnNewContact}>
+        <span>Novo contato</span>
+        <img src={newContact} alt="Novo contato" />
+      </Link>
 
-        <img src={photoURL || noimage} className={styles.thumb} alt={name} />
-        
-        <Link to='/logout'>
-          <img src={logout} className={styles.logout} alt="Sair" />
-        </Link>
-      </div>
-      
+      <img src={photoURL} className={styles.thumb} alt={name} />
+
+      <Link to="/logout">
+        <img src={logout} className={styles.logout} alt="Sair" />
+      </Link>
     </header>
   );
 };

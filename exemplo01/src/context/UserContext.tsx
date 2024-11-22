@@ -1,5 +1,4 @@
-import { Children, createContext, ReactNode, useEffect, useState } from "react";
-import { auth } from "../config/firebase";
+import { createContext, ReactNode, useEffect, useState } from "react";
 
 type UserType = {
   authTime: number;
@@ -16,18 +15,13 @@ type UserType = {
 };
 
 const initialValue: UserType = {
-  authTime: localStorage.getItem('authTime')
-    ? Number(localStorage.getItem('authTime'))
+  authTime: localStorage.getItem("authTime")
+    ? Number(localStorage.getItem("authTime"))
     : 0,
-
-  exp: localStorage.getItem('exp')
-    ? Number(localStorage.getItem('exp'))
-    : 0,
-
-  name: localStorage.getItem('name') || '',
-  email: localStorage.getItem('email') || '',
-  photoURL: localStorage.getItem('photoURL') || '',
-
+  exp: localStorage.getItem("exp") ? Number(localStorage.getItem("exp")) : 0,
+  name: localStorage.getItem("name") || "",
+  email: localStorage.getItem("email") || "",
+  photoURL: localStorage.getItem("photoURL") || "",
   setAuthTime: () => {},
   setExp: () => {},
   setName: () => {},
@@ -39,8 +33,8 @@ const initialValue: UserType = {
 export const UserContext = createContext(initialValue);
 
 type UserContextProps = {
-  children: ReactNode
-}
+  children: ReactNode;
+};
 
 export const UserContextProvider = ({ children }: UserContextProps) => {
   const [authTime, setAuthTime] = useState(initialValue.authTime);
@@ -50,30 +44,34 @@ export const UserContextProvider = ({ children }: UserContextProps) => {
   const [photoURL, setPhotoURL] = useState(initialValue.photoURL);
 
   useEffect(() => {
-    localStorage.setItem('authTime', `${authTime}`);
-    localStorage.setItem('exp', `${exp}`);
-    localStorage.setItem('name', name);
-    localStorage.setItem('email', email);
-    localStorage.setItem('photoURL', photoURL);
+    localStorage.setItem("authTime", `${authTime}`);
+    localStorage.setItem("exp", `${exp}`);
+    localStorage.setItem("name", name);
+    localStorage.setItem("email", email);
+    localStorage.setItem("photoURL", photoURL);
   }, [authTime, exp, name, email, photoURL]);
 
-  return(
-    <UserContext.Provider value={{
-      authTime,
-      exp,
-      name,
-      email,
-      photoURL,
-      setAuthTime,
-      setExp,
-      setName,
-      setEmail,
-      setPhotoURL,
-      isSessionValid: () => {
-        const timestamp = new Date().getTime();
-        const diff = exp - timestamp;
-        return diff > 0;
-      }
-    }}>{children}</UserContext.Provider>
-  )
-}
+  return (
+    <UserContext.Provider
+      value={{
+        authTime,
+        exp,
+        name,
+        email,
+        photoURL,
+        setAuthTime,
+        setExp,
+        setName,
+        setEmail,
+        setPhotoURL,
+        isSessionValid: () => {
+          const timestamp = new Date().getTime();
+          const diff = exp - timestamp;
+          return diff > 0;
+        },
+      }}
+    >
+      {children}
+    </UserContext.Provider>
+  );
+};

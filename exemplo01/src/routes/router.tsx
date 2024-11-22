@@ -13,7 +13,7 @@ export const routes: RouteObject[] = [
     element: <Login />,
   },
   {
-    path: "/Home",
+    path: "/home",
     element: (
       <ProtectedRoute>
         <Home />
