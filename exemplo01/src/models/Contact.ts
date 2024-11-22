@@ -13,7 +13,7 @@ export class Contact {
   address?: string;
   birthday?: Date;
   ownerEmail: string = "";
-  
+
   constructor(obj: Partial<Contact>) {
     Object.assign(this, obj);
   }
