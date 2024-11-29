@@ -1,0 +1,70 @@
+.contactForm {
+  background-color: #64748b;
+  margin: 30px auto;
+  padding: 20px;
+  width: 40%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contactForm label {
+  font-size: 1.2rem;
+  margin-bottom: 3px;
+}
+
+.contactForm input[type="text"],
+.contactForm input[type="tel"],
+.contactForm input[type="email"],
+.contactForm input[type="date"] {
+  font-size: 1rem;
+  height: 32px;
+  border-radius: 5px;
+  border: 2px solid #aaa;
+  padding: 0 10px;
+  font-family: "regular";
+  margin-bottom: 10px;
+}
+
+.contactForm input[type="text"]:focus,
+.contactForm input[type="tel"]:focus,
+.contactForm input[type="email"]:focus,
+.contactForm input[type="date"]:focus {
+  outline: 2px solid #f87171;
+}
+
+.contactForm input[type="date"] {
+  text-align: right;
+}
+
+.contactForm input[type="submit"] {
+  width: 40%;
+  display: block;
+  margin: 20px auto;
+  border: none;
+  border-radius: 5px;
+  background-color: #ef4444;
+  font-size: 1.2rem;
+  color: #fff;
+  font-family: "bold";
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.contactForm input[type="submit"]:disabled {
+  background-color: #ccc;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .contactForm {
+    width: 80%;
+    box-sizing: border-box;
+  }
+}

@@ -3,11 +3,7 @@ import { useContext, useEffect, useState } from "react";
 import styles from "./styles.module.css";
 import Header from "../../components/Header";
 import { Contact } from "../../models/Contact";
-<<<<<<< HEAD
 import { ContactService } from "../../services/ContactService";
-=======
-import { ContactService } from "../../services/ContactServices";
->>>>>>> dadb1d9ad66a6a6725e857391beec081d669279d
 import { UserContext } from "../../context/UserContext";
 import ContactCard from "../../components/ContactCard";
 import { Circles } from "react-loader-spinner";
@@ -33,10 +29,6 @@ const Home = () => {
       <Header title="Início" />
 
       <div className={styles.container}>
-<<<<<<< HEAD
-=======
-        
->>>>>>> dadb1d9ad66a6a6725e857391beec081d669279d
         <Circles
           height="80"
           width="80"
@@ -58,10 +50,6 @@ const Home = () => {
         )}
 
         {!loading && contacts.length === 0 && <p>Nenhum contato cadastrado</p>}
-<<<<<<< HEAD
-=======
-
->>>>>>> dadb1d9ad66a6a6725e857391beec081d669279d
       </div>
     </>
   );
