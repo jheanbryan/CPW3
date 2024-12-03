@@ -8,9 +8,14 @@ import { UserContext } from "../../context/UserContext";
 import ContactCard from "../../components/ContactCard";
 import { Circles } from "react-loader-spinner";
 
+import ConfirmationDialog from "../../components/ConfirmationDialog";
+
+
 const Home = () => {
   const [contacts, setContacts] = useState<Contact[]>([]);
   const [loading, isLoading] = useState(false);
+  const [openConfirmationDialog, shouldOpenConfirmationDialog] = useState(false);
+  const [selectedContact, setSelectedContact]= useState<Contact | undefined>(undefined);
 
   const { email } = useContext(UserContext);
 
@@ -23,6 +28,11 @@ const Home = () => {
       isLoading(false);
     })();
   }, []);
+
+  const openDialog = (contact: Contact) => {
+    setSelectedContact(contact);
+    shouldOpenConfirmationDialog(true);
+  }
 
   return (
     <>
@@ -44,12 +54,24 @@ const Home = () => {
             <h1>Seus contatos</h1>
 
             {contacts.map((c) => (
-              <ContactCard key={c.email} contact={c} />
+              <ContactCard key={c.email} 
+              contact={c} 
+              shouldOpenConfirmationDialog={openDialog}
+              />
             ))}
           </>
         )}
 
         {!loading && contacts.length === 0 && <p>Nenhum contato cadastrado</p>}
+
+        {selectedContact && (
+          <ConfirmationDialog
+            open={openConfirmationDialog}
+            contact={selectedContact}
+          />
+        )}
+
+        
       </div>
     </>
   );
