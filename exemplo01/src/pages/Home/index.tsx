@@ -68,6 +68,7 @@ const Home = () => {
           <ConfirmationDialog
             open={openConfirmationDialog}
             contact={selectedContact}
+            onClose={() => {shouldOpenConfirmationDialog(false)}}
           />
         )}
 
