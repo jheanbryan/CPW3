@@ -1,0 +1,364 @@
+{
+  "works": [
+    {
+      "code": "PHYS-2023-001",
+      "title": "Quantum Entanglement in Superconducting Nanowires",
+      "authors": ["Elena Rodriguez", "Michael Chen", "Sarah Patel"]
+    },
+    {
+      "code": "BIO-2023-002",
+      "title": "CRISPR-Based Gene Therapy for Rare Genetic Disorders",
+      "authors": ["David Kim", "Olivia Sharma", "Rajesh Gupta"]
+    },
+    {
+      "code": "COMP-2023-003",
+      "title": "Machine Learning Algorithms for Predictive Climate Modeling",
+      "authors": ["Emma Wilson", "Jamal Ahmed", "Sophia Martinez"]
+    },
+    {
+      "code": "CHEM-2023-004",
+      "title": "Novel Catalysts for Green Hydrogen Production",
+      "authors": ["Alexander Wong", "Isabella Torres", "Lucas Singh"]
+    },
+    {
+      "code": "NEURO-2023-005",
+      "title": "Neural Plasticity in Cognitive Rehabilitation",
+      "authors": ["Olivia Lee", "Ethan Patel", "Amara Johnson"]
+    },
+    {
+      "code": "ASTRO-2023-006",
+      "title": "Exoplanet Detection Using Advanced Spectroscopy",
+      "authors": ["Carlos Rodriguez", "Sophia Kim", "Nathan Chen"]
+    },
+    {
+      "code": "ENV-2023-007",
+      "title": "Microplastic Pollution in Deep Ocean Ecosystems",
+      "authors": ["Emma Garcia", "Daniel Wu", "Maria Santos"]
+    },
+    {
+      "code": "PHARM-2023-008",
+      "title": "Targeted Drug Delivery Mechanisms for Cancer Treatment",
+      "authors": ["Raj Mehta", "Lisa Chen", "Marcus Williams"]
+    },
+    {
+      "code": "GEO-2023-009",
+      "title": "Seismic Risk Assessment in Coastal Megacities",
+      "authors": ["Julia Park", "Ahmed Hassan", "Elena Martinez"]
+    },
+    {
+      "code": "ROBO-2023-010",
+      "title": "Adaptive Control Systems for Soft Robotics",
+      "authors": ["Alex Kim", "Sophie Laurent", "Victor Rodriguez"]
+    },
+    {
+      "code": "PHYS-2023-011",
+      "title": "Dark Matter Detection Using Quantum Sensors",
+      "authors": ["Maya Patel", "David Chen", "Rachel Goldman"]
+    },
+    {
+      "code": "BIO-2023-012",
+      "title": "Microbial Ecosystem Dynamics in Extreme Environments",
+      "authors": ["Carlos Silva", "Emily Wong", "Mohammed Ahmed"]
+    },
+    {
+      "code": "COMP-2023-013",
+      "title": "Quantum Computing Algorithms for Cryptography",
+      "authors": ["Sarah Lee", "Jason Kim", "Elena Rodriguez"]
+    },
+    {
+      "code": "CHEM-2023-014",
+      "title": "Sustainable Polymer Synthesis from Biomass",
+      "authors": ["Michael Torres", "Olivia Patel", "Ryan Singh"]
+    },
+    {
+      "code": "NEURO-2023-015",
+      "title": "Brain-Computer Interfaces for Motor Rehabilitation",
+      "authors": ["Jessica Wu", "Ahmed Khan", "Sophia Martinez"]
+    },
+    {
+      "code": "ASTRO-2023-016",
+      "title": "Gravitational Wave Analysis of Neutron Star Mergers",
+      "authors": ["Daniel Kim", "Maria Garcia", "Lucas Chen"]
+    },
+    {
+      "code": "ENV-2023-017",
+      "title": "Carbon Capture Technologies in Urban Environments",
+      "authors": ["Emma Rodriguez", "Nathan Patel", "Carlos Wong"]
+    },
+    {
+      "code": "PHARM-2023-018",
+      "title": "Personalized Medicine through Genomic Profiling",
+      "authors": ["Raj Singh", "Lisa Wu", "Michael Torres"]
+    },
+    {
+      "code": "GEO-2023-019",
+      "title": "Climate Change Impact on Alpine Ecosystems",
+      "authors": ["Julia Chen", "Ahmed Martinez", "Sophia Lee"]
+    },
+    {
+      "code": "ROBO-2023-020",
+      "title": "Autonomous Swarm Robotics for Disaster Response",
+      "authors": ["Alex Rodriguez", "Emma Kim", "Victor Patel"]
+    },
+    {
+      "code": "PHYS-2023-021",
+      "title": "Quantum Field Theory and Particle Interactions",
+      "authors": ["Maya Chen", "David Rodriguez", "Rachel Kim"]
+    },
+    {
+      "code": "BIO-2023-022",
+      "title": "Epigenetic Mechanisms in Aging Processes",
+      "authors": ["Carlos Wong", "Emily Patel", "Mohammed Singh"]
+    },
+    {
+      "code": "COMP-2023-023",
+      "title": "AI-Driven Predictive Maintenance Systems",
+      "authors": ["Sarah Torres", "Jason Wu", "Elena Kim"]
+    },
+    {
+      "code": "CHEM-2023-024",
+      "title": "Green Chemistry in Pharmaceutical Synthesis",
+      "authors": ["Michael Lee", "Olivia Chen", "Ryan Martinez"]
+    },
+    {
+      "code": "NEURO-2023-025",
+      "title": "Neuroplasticity in Learning and Memory",
+      "authors": ["Jessica Patel", "Ahmed Rodriguez", "Sophia Wong"]
+    },
+    {
+      "code": "ASTRO-2023-026",
+      "title": "Multiwavelength Observations of Galactic Nuclei",
+      "authors": ["Daniel Singh", "Maria Kim", "Lucas Torres"]
+    },
+    {
+      "code": "ENV-2023-027",
+      "title": "Sustainable Water Management Strategies",
+      "authors": ["Emma Chen", "Nathan Rodriguez", "Carlos Patel"]
+    },
+    {
+      "code": "PHARM-2023-028",
+      "title": "Immunotherapy Advances in Cancer Treatment",
+      "authors": ["Raj Kim", "Lisa Chen", "Michael Wong"]
+    },
+    {
+      "code": "GEO-2023-029",
+      "title": "Tectonic Plate Dynamics and Earthquake Prediction",
+      "authors": ["Julia Rodriguez", "Ahmed Lee", "Sophia Torres"]
+    },
+    {
+      "code": "ROBO-2023-030",
+      "title": "Biomimetic Design in Robotic Locomotion",
+      "authors": ["Alex Patel", "Emma Singh", "Victor Kim"]
+    },
+    {
+      "code": "PHYS-2023-031",
+      "title": "Advanced Materials for Quantum Computing",
+      "authors": ["Maya Rodriguez", "David Wong", "Rachel Chen"]
+    },
+    {
+      "code": "BIO-2023-032",
+      "title": "Synthetic Biology and Engineered Organisms",
+      "authors": ["Carlos Kim", "Emily Rodriguez", "Mohammed Lee"]
+    },
+    {
+      "code": "COMP-2023-033",
+      "title": "Deep Learning for Climate Change Modeling",
+      "authors": ["Sarah Chen", "Jason Patel", "Elena Singh"]
+    },
+    {
+      "code": "CHEM-2023-034",
+      "title": "Novel Catalytic Processes for Energy Storage",
+      "authors": ["Michael Wong", "Olivia Rodriguez", "Ryan Kim"]
+    },
+    {
+      "code": "NEURO-2023-035",
+      "title": "Cognitive Neuroscience of Decision Making",
+      "authors": ["Jessica Chen", "Ahmed Kim", "Sophia Patel"]
+    },
+    {
+      "code": "ASTRO-2023-036",
+      "title": "Cosmological Simulations of Dark Energy",
+      "authors": ["Daniel Torres", "Maria Rodriguez", "Lucas Chen"]
+    },
+    {
+      "code": "ENV-2023-037",
+      "title": "Biodiversity Conservation in Tropical Forests",
+      "authors": ["Emma Patel", "Nathan Kim", "Carlos Rodriguez"]
+    },
+    {
+      "code": "PHARM-2023-038",
+      "title": "Nanomedicine Approaches to Drug Delivery",
+      "authors": ["Raj Chen", "Lisa Wong", "Michael Patel"]
+    },
+    {
+      "code": "GEO-2023-039",
+      "title": "Arctic Sea Ice Dynamics and Climate Change",
+      "authors": ["Julia Kim", "Ahmed Torres", "Sophia Rodriguez"]
+    },
+    {
+      "code": "ROBO-2023-040",
+      "title": "Human-Robot Interaction in Collaborative Environments",
+      "authors": ["Alex Chen", "Emma Rodriguez", "Victor Lee"]
+    },
+    {
+      "code": "PHYS-2023-041",
+      "title": "Quantum Optics and Photonic Technologies",
+      "authors": ["Maya Kim", "David Patel", "Rachel Singh"]
+    },
+    {
+      "code": "BIO-2023-042",
+      "title": "Ecosystem Resilience in Changing Climates",
+      "authors": ["Carlos Rodriguez", "Emily Kim", "Mohammed Chen"]
+    },
+    {
+      "code": "COMP-2023-043",
+      "title": "Blockchain Technologies for Scientific Data Sharing",
+      "authors": ["Sarah Wong", "Jason Rodriguez", "Elena Chen"]
+    },
+    {
+      "code": "CHEM-2023-044",
+      "title": "Sustainable Chemical Processes in Industry",
+      "authors": ["Michael Patel", "Olivia Kim", "Ryan Rodriguez"]
+    },
+    {
+      "code": "NEURO-2023-045",
+      "title": "Brain Network Dynamics in Neurological Disorders",
+      "authors": ["Jessica Rodriguez", "Ahmed Chen", "Sophia Wong"]
+    },
+    {
+      "code": "ASTRO-2023-046",
+      "title": "Exoplanet Atmospheric Composition Analysis",
+      "authors": ["Daniel Kim", "Maria Patel", "Lucas Rodriguez"]
+    },
+    {
+      "code": "ENV-2023-047",
+      "title": "Urban Ecosystem Services and Sustainability",
+      "authors": ["Emma Rodriguez", "Nathan Chen", "Carlos Kim"]
+    },
+    {
+      "code": "PHARM-2023-048",
+      "title": "Gene Therapy Advances in Rare Diseases",
+      "authors": ["Raj Rodriguez", "Lisa Patel", "Michael Wong"]
+    },
+    {
+      "code": "GEO-2023-049",
+      "title": "Paleoclimate Reconstruction Techniques",
+      "authors": ["Julia Chen", "Ahmed Rodriguez", "Sophia Kim"]
+    },
+    {
+      "code": "ROBO-2023-050",
+      "title": "Adaptive Learning in Autonomous Systems",
+      "authors": ["Alex Rodriguez", "Emma Chen", "Victor Patel"]
+    },
+    {
+      "code": "PHYS-2023-051",
+      "title": "Superconductivity at Higher Temperatures",
+      "authors": ["Maya Rodriguez", "David Chen", "Rachel Kim"]
+    },
+    {
+      "code": "BIO-2023-052",
+      "title": "Genomic Diversity in Human Populations",
+      "authors": ["Carlos Kim", "Emily Rodriguez", "Mohammed Patel"]
+    },
+    {
+      "code": "COMP-2023-053",
+      "title": "Machine Learning in Precision Agriculture",
+      "authors": ["Sarah Chen", "Jason Kim", "Elena Rodriguez"]
+    },
+    {
+      "code": "CHEM-2023-054",
+      "title": "Advanced Materials for Energy Conversion",
+      "authors": ["Michael Rodriguez", "Olivia Chen", "Ryan Patel"]
+    },
+    {
+      "code": "NEURO-2023-055",
+      "title": "Neuroimaging of Cognitive Processes",
+      "authors": ["Jessica Kim", "Ahmed Rodriguez", "Sophia Chen"]
+    },
+    {
+      "code": "ASTRO-2023-056",
+      "title": "Gravitational Lensing in Distant Galaxies",
+      "authors": ["Daniel Rodriguez", "Maria Kim", "Lucas Patel"]
+    },
+    {
+      "code": "ENV-2023-057",
+      "title": "Circular Economy in Waste Management",
+      "authors": ["Emma Kim", "Nathan Rodriguez", "Carlos Chen"]
+    },
+    {
+      "code": "PHARM-2023-058",
+      "title": "Precision Medicine and Pharmacogenomics",
+      "authors": ["Raj Kim", "Lisa Rodriguez", "Michael Chen"]
+    },
+    {
+      "code": "GEO-2023-059",
+      "title": "Volcanic Eruption Prediction Models",
+      "authors": ["Julia Rodriguez", "Ahmed Kim", "Sophia Patel"]
+    },
+    {
+      "code": "ROBO-2023-060",
+      "title": "Soft Robotics in Medical Applications",
+      "authors": ["Alex Chen", "Emma Rodriguez", "Victor Kim"]
+    },
+    {
+      "code": "PHYS-2023-061",
+      "title": "Quantum Information Processing",
+      "authors": ["Maya Chen", "David Rodriguez", "Rachel Patel"]
+    },
+    {
+      "code": "BIO-2023-062",
+      "title": "Microbiome Interactions in Human Health",
+      "authors": ["Carlos Rodriguez", "Emily Kim", "Mohammed Chen"]
+    },
+    {
+      "code": "COMP-2023-063",
+      "title": "AI Ethics and Responsible Computing",
+      "authors": ["Sarah Rodriguez", "Jason Chen", "Elena Kim"]
+    },
+    {
+      "code": "CHEM-2023-064",
+      "title": "Green Chemistry in Industrial Processes",
+      "authors": ["Michael Kim", "Olivia Rodriguez", "Ryan Chen"]
+    },
+    {
+      "code": "NEURO-2023-065",
+      "title": "Neuroplasticity and Cognitive Rehabilitation",
+      "authors": ["Jessica Rodriguez", "Ahmed Kim", "Sophia Chen"]
+    },
+    {
+      "code": "ASTRO-2023-066",
+      "title": "Dark Matter Distribution in Galaxy Clusters",
+      "authors": ["Daniel Chen", "Maria Rodriguez", "Lucas Kim"]
+    },
+    {
+      "code": "ENV-2023-067",
+      "title": "Renewable Energy Integration Strategies",
+      "authors": ["Emma Rodriguez", "Nathan Kim", "Carlos Chen"]
+    },
+    {
+      "code": "PHARM-2023-068",
+      "title": "Immunology and Vaccine Development",
+      "authors": ["Raj Rodriguez", "Lisa Kim", "Michael Chen"]
+    },
+    {
+      "code": "GEO-2023-069",
+      "title": "Climate Change Impact on Ocean Currents",
+      "authors": ["Julia Kim", "Ahmed Chen", "Sophia Rodriguez"]
+    },
+    {
+      "code": "ROBO-2023-070",
+      "title": "Human-Centered Design in Robotics",
+      "authors": ["Alex Rodriguez", "Emma Kim", "Victor Chen"]
+    },
+    {
+      "code": "PHYS-2023-071",
+      "title": "Quantum Materials and Emergent Properties",
+      "authors": ["Maya Rodriguez", "David Kim", "Rachel Chen"]
+    },
+    {
+      "code": "BIO-2023-072",
+      "title": "Ecological Networks and Biodiversity",
+      "authors": ["Carlos Kim", "Emily Rodriguez", "Mohammed Chen"]
+    }
+  ]
+}

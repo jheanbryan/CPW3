@@ -1,0 +1,71 @@
+.header {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-image: linear-gradient(to right, #1e293b, #0f172a);
+}
+
+.backButton {
+  width: 24px;
+  filter: invert(1);
+  margin-right: 10px;
+}
+
+.backButton img {
+  width: 100%;
+}
+
+.appTitle {
+  font-family: "bold";
+  font-size: 1.5rem;
+}
+
+.btnNewContact {
+  background-color: #f87171;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-align: center;
+  margin-left: auto;
+  text-decoration: none;
+  color: #fff;
+}
+
+.btnNewContact span {
+  font-family: "bold";
+  font-size: 16px;
+}
+
+.btnNewContact img {
+  display: none;
+}
+
+.thumb {
+  width: 36px;
+  border-radius: 50%;
+  margin: 0 20px;
+}
+
+.logout {
+  width: 24px;
+  filter: invert(1);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    padding: 10px;
+  }
+
+  .btnNewContact {
+    padding: 7px;
+  }
+
+  .btnNewContact span {
+    display: none;
+  }
+
+  .btnNewContact img {
+    display: inline;
+    width: 24px;
+  }
+}

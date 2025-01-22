@@ -1,0 +1,24 @@
+.blocoTexto {
+  width: 60%;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  background-color: #c5eff7;
+  border-radius: 10px;
+}
+
+.thumb {
+  width: 50%;
+}
+
+.titulo {
+  font-family: "bold";
+  text-align: center;
+}
+
+.paragrafo {
+  font-family: "regular";
+  text-align: center;
+}

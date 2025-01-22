@@ -1,0 +1,93 @@
+.contactCard {
+  background-color: #6b7280;
+  display: flex;
+  width: 500px;
+  border-radius: 5px;
+}
+
+.thumb {
+  width: 30%;
+  padding: 10px;
+}
+
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.info {
+  width: 70%;
+  padding: 10px;
+}
+
+.metadata {
+  margin-bottom: 5px;
+}
+
+.key {
+  font-family: "bold";
+  font-size: 1rem;
+  margin-right: 5px;
+}
+
+.value {
+  font-family: "regular";
+  font-size: 1rem;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+}
+
+.actionButton {
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+}
+
+.actionButton img {
+  width: 100%;
+}
+
+.editButton {
+  background-color: #22c55e;
+}
+
+.deleteButton {
+  background-color: #ef4444;
+  cursor: pointer;
+  width: 60px;
+}
+
+@media screen and (max-width: 600px) {
+  .contactCard {
+    width: 80%;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0;
+  }
+
+  .thumb {
+    width: 180px;
+    height: 180px;
+  }
+
+  .actions {
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .editButton {
+    width: 36px;
+  }
+
+  .deleteButton {
+    width: 48px;
+  }
+}
