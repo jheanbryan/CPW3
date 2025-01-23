@@ -2,7 +2,6 @@ import { useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { signOut } from "firebase/auth";
 
-import styles from "./styles.module.css";
 import { UserContext } from "../../Context/UserContext";
 import { auth } from "../../config/firebase";
 import { Bars } from "react-loader-spinner";
@@ -27,7 +26,7 @@ const Logout = () => {
   }, []);
 
   return (
-    <div className={styles.container}>
+    <div>
       <Bars
         height="80"
         width="80"

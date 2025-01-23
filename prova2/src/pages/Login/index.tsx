@@ -73,7 +73,7 @@ const Login = () => {
 
       {!loading && (
         <>
-          <h1>Agenda TSI</h1>
+          <h1>Crypt</h1>
 
           <button onClick={handleLogin}>
             <img src={google} alt="Login com Google" />
