@@ -8,5 +8,7 @@ export const MyGlobalStyles = createGlobalStyle`
     }
     html{
         font-size: 16px; 
+        background-color: #1C1E26;
+        color: #fff;
     }
 `;
