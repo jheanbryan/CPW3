@@ -1,10 +1,13 @@
+import { MainContainer } from "./styles";
+import notFound from '../../assets/img/notFound.svg'
 
 const NotFound = () => {
     return (
         <>
-        <div>
-            <p>Nao encontrada</p>
-        </div>
+        <MainContainer>
+            <img src={notFound} alt="" />
+            <p>Página não encontrada</p>
+        </MainContainer>
         </>
     );
 

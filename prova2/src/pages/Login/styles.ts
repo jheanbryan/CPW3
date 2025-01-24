@@ -1,5 +1,13 @@
 import styled from "styled-components";
 
+export const MainContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+`;
+
 export const Title = styled.h1`
     margin: 1rem auto;
     text-align: center;
@@ -14,11 +22,13 @@ export const LoginButton = styled.button`
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  border: 1px solid #fff;
+  border: 2px solid #fff;
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 5px;
-  margin: auto;
   
+`;
+
+export const IconImage = styled.img`
+  width: 1.5rem;
 `;

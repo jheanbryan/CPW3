@@ -6,7 +6,7 @@ import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { UserContext } from "../../Context/UserContext";
 import google from "../../assets/img/google.png";
 import { auth } from "../../config/firebase";
-import { Title, LoginButton } from "./styles";
+import { Title, LoginButton, MainContainer, IconImage } from "./styles";
 
 const Login = () => {
   const [loading, isLoading] = useState(false);
@@ -59,7 +59,7 @@ const Login = () => {
   };
 
   return (
-    <div>
+    <MainContainer>
       {loading && (
         <Bars
           height="80"
@@ -74,14 +74,16 @@ const Login = () => {
 
       {!loading && (
         <>
+        <div>
           <Title>Crypt</Title>
-          <LoginButton onClick={handleLogin}>
-            <img src={google} alt="Login com Google" />
-            <span>Entrar com Google</span>
+            <LoginButton onClick={handleLogin}>
+              <IconImage src={google} alt="Login com Google" />
+              <span>Entrar com Google</span>
           </LoginButton>
+        </div>
         </>
       )}
-    </div>
+    </MainContainer>
   );
 };
 

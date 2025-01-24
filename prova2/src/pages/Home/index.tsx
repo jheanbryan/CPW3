@@ -1,12 +1,13 @@
-import { Title } from "./styles";
-
+import { MainContainer, Title } from "./styles";
+import  Header  from "../../components/Header/index";
 
 const Home = () => {
     return (
         <>
-        <div>
-            <Title>Home</Title>
-        </div>
+        <Header />
+        <MainContainer>
+            
+        </MainContainer>
         </>
     );
 

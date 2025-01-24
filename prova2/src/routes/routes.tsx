@@ -4,6 +4,7 @@ import Login from "../pages/Login";
 import ProtectedRoute from "../components/ProtectedRoute";
 import Logout from "../pages/Logout";
 import NotFound from "../pages/NotFound";
+import Search from "../pages/Search";
 
 export const routes: RouteObject[] = [
   {
@@ -15,6 +16,14 @@ export const routes: RouteObject[] = [
     element: (
       <ProtectedRoute>
         <Home />
+      </ProtectedRoute>
+    ),
+  },
+  {
+    path: "/searchCrypt",
+    element: (
+      <ProtectedRoute>
+        <Search />
       </ProtectedRoute>
     ),
   },
