@@ -11,6 +11,14 @@ export const MainContainer = styled.div`
     margin: auto;
 `;
 
+export const DivLine = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+`;
+
+
 export const InputSearch = styled.input`
     line-height: 24px;
     border: 1px solid #000;
@@ -19,6 +27,27 @@ export const InputSearch = styled.input`
     padding: 5px;
     max-width: 300px;
     width: 100%;
+    height: 2rem;
+`;
+
+export const ButtonSearch = styled.button`
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #000;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    cursor: pointer;
+    transition: color 0.3s, border-bottom 0.3s;
+    border: 2px solid transparent;
+
+    &:hover {
+    background-color: #50fa7b; /* Verde neon */
+    border-bottom: 2px solid #fff;
+  }
 `;
 
 export const CryptoCard = styled.div`
