@@ -30,6 +30,33 @@ export const InputSearch = styled.input`
     height: 2rem;
 `;
 
+export const InputItems = styled.div`
+    flex-direction: column;
+    position: absolute;
+    z-index: 100;
+    max-width: 300px;
+    width: 100%;
+    overflow-y: auto;
+    max-height: 300px;
+    display: flex; 
+    margin-top: 335px;
+`;
+
+export const Item = styled.div`
+    background-color: #50fa7b;
+    display: flex;
+    gap: 5px;
+    color: #000;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+    &:hover{
+        background-color: #000;
+        color: #50fa7b;
+    }
+`;
+
+
 export const ButtonSearch = styled.button`
     padding: 5px 10px;
     border-radius: 5px;
@@ -45,7 +72,7 @@ export const ButtonSearch = styled.button`
     border: 2px solid transparent;
 
     &:hover {
-    background-color: #50fa7b; /* Verde neon */
+    background-color: #50fa7b;
     border-bottom: 2px solid #fff;
   }
 `;
