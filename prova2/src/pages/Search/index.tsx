@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { DivLine, InputItems, InputSearch, Item, MainContainer } from "./styles";
+import { CryptoCard, CryptoDescription, CryptoImage, DivLine, InputItems, InputSearch, Item, MainContainer } from "./styles";
 import Header from "../../components/Header/index";
 import { searchCrypto } from '../../services/cryptService';
 import cryptocurrencies from '../../services/CryptoInformation';
@@ -50,6 +50,7 @@ const Search = () => {
     return (
         <>
             <Header />
+
             <MainContainer>
                 <InputSearch
                     placeholder="Pesquise por uma cripto"
@@ -71,15 +72,15 @@ const Search = () => {
                 )}
 
                 {cryptos && (
-                    <div>
-                        <h2>{cryptos.coin}</h2>
-                        <img src={cryptos.logo} alt={cryptos.coin} style={{ width: '50px', height: '50px' }} />
-                        <p>Ticker: {cryptos.ticker}</p>
-                        <p>Status: {cryptos.status}</p>
-                        <p>Minimum Transaction: {cryptos.minimum_transaction} {cryptos.minimum_transaction_coin}</p>
-                        <p>Minimum Fee: {cryptos.minimum_fee} {cryptos.minimum_fee_coin}</p>
-                        <p>Fee Percent: {cryptos.fee_percent}</p>
-                    </div>
+                    <CryptoCard>
+                        <CryptoImage src={cryptos.logo} alt={cryptos.coin}  />
+                        
+                        <CryptoDescription>
+                            <h2>{cryptos.coin}</h2>
+                            <p>{Number(cryptos.prices.BRL).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</p>
+                            <p>Taxa: {cryptos.fee_percent}%</p>
+                        </CryptoDescription>
+                    </CryptoCard>
                 )}
             </MainContainer>
         </>

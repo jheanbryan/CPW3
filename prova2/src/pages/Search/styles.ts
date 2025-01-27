@@ -9,6 +9,7 @@ export const MainContainer = styled.div`
     width: 100%;
     gap: 15px;
     margin: auto;
+    position: relative;
 `;
 
 export const DivLine = styled.div`
@@ -31,7 +32,6 @@ export const InputSearch = styled.input`
 `;
 
 export const InputItems = styled.div`
-    flex-direction: column;
     position: absolute;
     z-index: 100;
     max-width: 300px;
@@ -39,8 +39,14 @@ export const InputItems = styled.div`
     overflow-y: auto;
     max-height: 300px;
     display: flex; 
-    margin-top: 335px;
+    flex-direction: column;
+    border-radius: 5px;
+    position: fixed;
+    top: 125px; 
+    border-radius: 5px;
 `;
+
+
 
 export const Item = styled.div`
     background-color: #50fa7b;
@@ -49,7 +55,6 @@ export const Item = styled.div`
     color: #000;
     cursor: pointer;
     padding: 5px;
-    border-radius: 5px;
     &:hover{
         background-color: #000;
         color: #50fa7b;
@@ -78,17 +83,47 @@ export const ButtonSearch = styled.button`
 `;
 
 export const CryptoCard = styled.div`
+  background-color: #50fa7b;
+  color: #000;
+  display: flex;
+  gap: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+  max-width: 350px;
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+  position: relative;
+
+  &:hover {
     background-color: #fff;
+
+    &::after {
+      opacity: 1; 
+      transform: translateY(0);
+    }
+  }
+
+  &::after {
+    content: "Saiba mais";
+    position: absolute;
+    bottom: -25px; 
+    left: 50%; 
+    transform: translateX(-50%) translateY(10px);
+    background-color: #50fa7b;
     color: #000;
-    display: flex;
-    gap: 5px;
+    padding: 5px 10px;
     border-radius: 5px;
-    margin: 10px 0;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+  }
 `;
 
 export const CryptoImage = styled.img`
-    max-width: 100%;
-    width: 95%;
+    width: 45px;
+    height: 45px;
 `;
 
 export const CryptoDescription = styled.div`
