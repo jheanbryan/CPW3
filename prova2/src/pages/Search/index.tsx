@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { CryptoCard, CryptoDescription, CryptoImage, DivLine, InputItems, InputSearch, Item, MainContainer } from "./styles";
 import Header from "../../components/Header/index";
 import { searchCrypto } from '../../services/SearchService';
-import cryptocurrencies from '../../services/CryptoInfoArray';
+import { getCryptoOptions } from '../../services/CryptoOptions';
 
 const Search = () => {
     const [cryptos, setCryptos] = useState<any | null>(null); 
     const [searchTerm, setSearchTerm] = useState('');
     const [debouncedTerm, setDebouncedTerm] = useState(searchTerm);
-    const [showList, setShowList] = useState(false);  // Estado para controlar o clique no input
+    const [showList, setShowList] = useState(false);
 
     useEffect(() => {
         if (debouncedTerm) {
