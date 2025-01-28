@@ -1,14 +1,24 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 
-import { Img, MainContainer, Table, Tbody, Td, Th, Thead, Title } from "./styles";
+import {
+  Img,
+  MainContainer,
+  Table,
+  Td,
+  Th,
+  Thead,
+  DivLine,
+  Tr,
+  Title,
+} from "./styles";
 import Header from "../../components/Header/index";
-import { searchCrypto, CryptoInfo } from '../../services/HomeService';
-import { DivLine } from '../Search/styles';
-
+import { searchCrypto, CryptoInfo } from "../../services/HomeService";
+import CryptoChart from "../../components/CryptoChart";
 
 const Home = () => {
   const [cryptos, setCryptos] = useState<CryptoInfo[]>([]);
-  
+  let count: number = 0;
+
   useEffect(() => {
     const searchCryptosForHome = async () => {
       const data = await searchCrypto();
@@ -21,6 +31,9 @@ const Home = () => {
   return (
     <>
       <Header />
+      <Title>
+        Criptos mais Populares
+      </Title>
       <MainContainer>
         <Table>
           <Thead>
@@ -32,13 +45,10 @@ const Home = () => {
             </tr>
           </Thead>
 
-          <Tbody>
+          <tbody>
             {cryptos.map((crypto) => (
-              <tr key={crypto.id}>
-
-                <Td>
-                  {crypto.id}
-                </Td>
+              <Tr key={crypto.id}>
+                <Td>{(count += 1)}</Td>
 
                 <Td>
                   <DivLine>
@@ -60,16 +70,11 @@ const Home = () => {
                   })}
                 </Td>
                 <Td>
-                  <img
-                    src={`https://image-charts.com/chart?cht=ls&chs=150x50&chd=t:${crypto.sparkline.join(
-                      ","
-                    )}&chco=0077ff`}
-                    alt={`Gráfico de ${crypto.name}`}
-                  />
+                  <CryptoChart sparkline={crypto.sparkline} />
                 </Td>
-              </tr>
+              </Tr>
             ))}
-          </Tbody>
+          </tbody>
         </Table>
       </MainContainer>
     </>

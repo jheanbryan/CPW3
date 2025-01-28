@@ -47,8 +47,10 @@ export const Th = styled.th`
   border-bottom: 2px solid ${textColor};
 `;
 
-export const Tbody = styled.tbody`
-  & tr:hover {
+export const Tr = styled.tr`
+  cursor: pointer;
+
+  &:hover {
     background-color: ${hoverColor};
     transition: 0.3s;
   }
@@ -75,5 +77,4 @@ export const CryptoName = styled.span`
 export const DivLine = styled.div`
     display: flex;
     align-items: center;
-    justify-content: center;
 `;
