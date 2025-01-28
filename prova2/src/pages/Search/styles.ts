@@ -49,7 +49,7 @@ export const InputItems = styled.div`
 
 
 export const Item = styled.div`
-    background-color: #50fa7b;
+    background-color: #ffffff;
     display: flex;
     gap: 5px;
     color: #000;
@@ -57,7 +57,7 @@ export const Item = styled.div`
     padding: 5px;
     &:hover{
         background-color: #000;
-        color: #50fa7b;
+        color: #ffffff;
     }
 `;
 
@@ -77,13 +77,13 @@ export const ButtonSearch = styled.button`
     border: 2px solid transparent;
 
     &:hover {
-    background-color: #50fa7b;
+    background-color: #c0c0c0;
     border-bottom: 2px solid #fff;
   }
 `;
 
 export const CryptoCard = styled.div`
-  background-color: #50fa7b;
+  background-color: #c0c0c0;
   color: #000;
   display: flex;
   gap: 10px;
@@ -110,7 +110,7 @@ export const CryptoCard = styled.div`
     bottom: -25px; 
     left: 50%; 
     transform: translateX(-50%) translateY(10px);
-    background-color: #50fa7b;
+    background-color: #c0c0c0;
     color: #000;
     padding: 5px 10px;
     border-radius: 5px;

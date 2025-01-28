@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { CryptoCard, CryptoDescription, CryptoImage, DivLine, InputItems, InputSearch, Item, MainContainer } from "./styles";
 import Header from "../../components/Header/index";
-import { searchCrypto } from '../../services/cryptService';
-import cryptocurrencies from '../../services/CryptoInformation';
+import { searchCrypto } from '../../services/SearchService';
+import cryptocurrencies from '../../services/CryptoInfoArray';
 
 const Search = () => {
     const [cryptos, setCryptos] = useState<any | null>(null); 

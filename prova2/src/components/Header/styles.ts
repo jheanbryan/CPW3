@@ -6,7 +6,7 @@ export const Header = styled.header`
   justify-content: space-between;
   align-items: center;
   height: 60px;
-  background: linear-gradient(45deg, #1C1E26, #282A36);
+  background: linear-gradient(45deg,#5d626e, #282A36);
   color: #fff;
   padding: 0 2rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -24,8 +24,8 @@ export const StyledLink = styled(Link)`
   border-bottom: 2px solid transparent;
 
   &:hover {
-    color: #50fa7b; /* Verde neon */
-    border-bottom: 2px solid #50fa7b;
+    color:#6d727e; /* Verde neon */
+    border-bottom: 2px solid #6d727e;
   }
 `;
 
