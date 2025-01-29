@@ -29,6 +29,7 @@ export const LoginButton = styled.button`
   display: flex;
   align-items: center;
   gap: 5px;
+  margin-top: 10px;
   
 `;
 

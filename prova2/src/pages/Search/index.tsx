@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { CryptoCard, CryptoDescription, CryptoImage, DivLine, InputItems, InputSearch, Item, MainContainer } from "./styles";
+import { CryptoCard, CryptoDescription, DivLine, InputItems, InputSearch, Item, MainContainer } from "./styles";
 import Header from "../../components/Header/index";
 import { Crypto, getCryptoOptions } from '../../services/CryptoOptions';
 import { getCriptoDetails } from '../../services/CriptoDetails';
