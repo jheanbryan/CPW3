@@ -1,52 +1,57 @@
 import React, { useState, useEffect } from 'react';
 import { CryptoCard, CryptoDescription, CryptoImage, DivLine, InputItems, InputSearch, Item, MainContainer } from "./styles";
 import Header from "../../components/Header/index";
-import { searchCrypto } from '../../services/SearchService';
-import { getCryptoOptions } from '../../services/CryptoOptions';
+import { Crypto, getCryptoOptions } from '../../services/CryptoOptions';
+import { getCriptoDetails } from '../../services/CriptoDetails';
 
 const Search = () => {
-    const [cryptos, setCryptos] = useState<any | null>(null); 
-    const [searchTerm, setSearchTerm] = useState('');
-    const [debouncedTerm, setDebouncedTerm] = useState(searchTerm);
-    const [showList, setShowList] = useState(false);
+    const [cryptoOptions, setCryptoOptions] = useState<Crypto[]>([]); // lista de criptosDisponiveis
+    const [searchTerm, setSearchTerm] = useState(''); // termo para buscar
+    const [showList, setShowList] = useState(false); // lista de criptos para mostrar
+    const [selectedCrypto, setSelectedCrypto] = useState<Crypto | null>(null); // guardar cripto clickada
 
+
+    //carregar itens do input
     useEffect(() => {
-        if (debouncedTerm) {
-            const fetchCryptoData = async () => {
-                const result = await searchCrypto(debouncedTerm);
-                setCryptos(result);
-            };
-            fetchCryptoData();
-        }
-    }, [debouncedTerm]);
+        const fetchCryptoOptions = async () => {
+          const cryptoOptionsData = await getCryptoOptions();
+          setCryptoOptions(cryptoOptionsData);
+        };
+      
+        fetchCryptoOptions();
+    }, []);
+    
+    // Filtra as criptos com base no termo digitado
+    const filteredCryptos = cryptoOptions.filter((crypto) =>
+        crypto.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
+        crypto.id.toLowerCase().includes(searchTerm.toLowerCase())
+    );
 
+    //definir um novo termo de busca conforme usuario digita
     const handleInputChange = (e: any) => {
         const value = e.target.value;
+        console.log(value)
         setSearchTerm(value);
     };
-
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            setDebouncedTerm(searchTerm);
-        }, 500);
-        return () => clearTimeout(timer);  
-    }, [searchTerm]);
 
     const showListDiv = () => {
         setShowList(true);
     };
 
-    const removeListDiv = (criptoTyker: string) => {
+    const removeListDiv = (crypto: Crypto) => {
+        //remover a lista, setar o termo e a criptoSelecionada
         setShowList(false);
-        setSearchTerm(criptoTyker) 
+        setSearchTerm(crypto.name);
+        setSelectedCrypto(crypto);                                
+
+        //chamar funcao para dar um get na img e valor da cripto
+        getCryptoDetailsById(crypto.id);
     };
 
-    // Filtra as criptos com base no termo digitado
-    const filteredCryptos = cryptocurrencies.filter((crypto) =>
-        crypto.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
-        crypto.ticker.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-
+    const getCryptoDetailsById = async (id: string) => {
+        const cryptoDetails = await getCriptoDetails(id);
+        console.log(cryptoDetails);
+    };
     return (
         <>
             <Header />
@@ -62,23 +67,21 @@ const Search = () => {
                 {showList && (
                     <InputItems>
                         {filteredCryptos.map((crypto, index) => (
-                            <Item key={index} onClick={() => {removeListDiv(crypto.ticker)}}>
+                            <Item 
+                            key={index} 
+                            onClick={() => {removeListDiv(crypto)}}
+                            >
                                 <span>{crypto.name}</span>
-                                -
-                                <span>{crypto.networkType}</span>
                             </Item>
                         ))}
                     </InputItems>
                 )}
 
-                {cryptos && (
+                {selectedCrypto && (
                     <CryptoCard>
-                        <CryptoImage src={cryptos.logo} alt={cryptos.coin}  />
                         
                         <CryptoDescription>
-                            <h2>{cryptos.coin}</h2>
-                            <p>{Number(cryptos.prices.BRL).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</p>
-                            <p>Taxa: {cryptos.fee_percent}%</p>
+                            <h2>{selectedCrypto.name}</h2>
                         </CryptoDescription>
                     </CryptoCard>
                 )}
@@ -86,5 +89,18 @@ const Search = () => {
         </>
     );
 };
+/*
 
+                {crypto && (
+                    <CryptoCard>
+                        <CryptoImage src={crypto.logo} alt={cryptos.coin}  />
+                        
+                        <CryptoDescription>
+                            <h2>{crypto.coin}</h2>
+                            <p>{Number(crypto.prices.BRL).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</p>
+                            <p>Taxa: {cryptos.fee_percent}%</p>
+                        </CryptoDescription>
+                    </CryptoCard>
+                )}
+*/
 export default Search;

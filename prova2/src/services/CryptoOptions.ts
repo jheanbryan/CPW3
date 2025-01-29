@@ -10,7 +10,7 @@ export class Crypto {
     }
 }
   
-export async function getCryptoOptions():  Promise<Crypto[]>{
+export async function getCryptoOptions(): Promise<Crypto[]>{
     const resp = await fetch(
       `https://api.coingecko.com/api/v3/coins/list`,
       { method: 'GET' }
@@ -23,6 +23,7 @@ export async function getCryptoOptions():  Promise<Crypto[]>{
   
     const data = await resp.json();
 
-    return data;
-}
+  //retornar uma objeto para cada item recebido e jogar num array 
+    return data.map((item: any) => new Crypto(item));
+};
   
