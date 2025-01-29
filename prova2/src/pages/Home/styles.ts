@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
-const primaryColor = "#344159";
-const secondaryColor = "#5d626e";
+// Variáveis de cor
+const bgPrimaryColor = "#344159";
+const bgSecondaryColor = "#5d626e";
 const textColor = "#fff";
 const hoverColor = "#4a5160";
 
@@ -28,7 +29,7 @@ export const Table = styled.table`
   width: 100%;
   max-width: 1000px;
   border-collapse: collapse;
-  background-color: ${secondaryColor};
+  background-color: ${bgSecondaryColor};
   color: ${textColor};
   border-radius: 10px;
   overflow: hidden;
@@ -36,7 +37,7 @@ export const Table = styled.table`
 `;
 
 export const Thead = styled.thead`
-  background-color: ${primaryColor};
+  background-color: ${bgPrimaryColor};
 `;
 
 export const Th = styled.th`
@@ -49,10 +50,10 @@ export const Th = styled.th`
 
 export const Tr = styled.tr`
   cursor: pointer;
+  transition: background-color 0.3s;
 
   &:hover {
     background-color: ${hoverColor};
-    transition: 0.3s;
   }
 `;
 
@@ -75,6 +76,6 @@ export const CryptoName = styled.span`
 `;
 
 export const DivLine = styled.div`
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 `;

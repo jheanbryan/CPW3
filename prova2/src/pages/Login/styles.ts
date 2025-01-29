@@ -1,5 +1,8 @@
 import styled from "styled-components";
 
+const bgColor = '#1C1E26';
+const secondaryColor = '#fff';
+
 export const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -17,12 +20,12 @@ export const LoginButton = styled.button`
   padding: 0.8rem;
   font-size: 1rem;
   font-weight: bold;
-  color: #fff;
-  background-color: #1C1E26;
+  color: ${secondaryColor};
+  background-color: ${bgColor};
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  border: 2px solid #fff;
+  border: 2px solid ${secondaryColor};
   display: flex;
   align-items: center;
   gap: 5px;
