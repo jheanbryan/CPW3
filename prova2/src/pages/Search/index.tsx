@@ -101,7 +101,14 @@ const Search = () => {
                         <CryptoDescription>
 
                         <CryptoName>{selectedCrypto.name}</CryptoName>
-                        <p>R$ {cryptoDetails.current_price}</p>
+                        <p>
+                        {cryptoDetails.current_price.toLocaleString("pt-BR", { 
+                        style: "currency", 
+                        currency: "BRL", 
+                        minimumFractionDigits: 2,  
+                        maximumFractionDigits: 5 
+                        })}
+                        </p>
                         </CryptoDescription>
                     </CryptoCard>
                 )}

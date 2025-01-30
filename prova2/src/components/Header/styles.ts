@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const bgColor = "linear-gradient(45deg,#5d626e, #282A36)";
 const textColor = "#fff";
-const hoverColor = "#6d727e";
+const hoverColor = "#fff";
 
 export const Header = styled.header`
   display: flex;

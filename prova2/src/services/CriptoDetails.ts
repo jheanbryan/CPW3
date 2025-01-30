@@ -15,7 +15,7 @@ export class CryptoDetails {
     this.name = data.name || "Nome não disponível";
     this.image = data.image?.large || data.image;
     this.symbol = data.symbol || "Símbolo não disponível";
-    this.description = data.description?.brl || "Descrição não disponível";
+    this.description = data.description?.brl ||data.description?.en || "Descrição não disponível";
     this.links = data.links?.homepage || []; 
     this.country_origin = data.country_origin || "País de origem não disponível";
     this.genesis_date = data.genesis_date || "Data de origem não disponível";
