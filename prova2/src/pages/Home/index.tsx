@@ -14,10 +14,10 @@ import {
 import Header from "../../components/Header/index";
 import { searchCrypto, CryptoInfo } from "../../services/HomeService";
 import CryptoChart from "../../components/CryptoChart";
-import { useNavigate } from "react-router-dom";
+//import { useNavigate } from "react-router-dom";
 
 const Home = () => {
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
   const [cryptos, setCryptos] = useState<CryptoInfo[]>([]);
   let count: number = 0;
 
@@ -50,8 +50,7 @@ const Home = () => {
           <tbody>
             {cryptos.map((crypto) => (
               <Tr 
-                key={crypto.id} 
-                onClick={() => {navigate(`/crypto/${crypto.id}`)}}
+                key={crypto.id}
                 >
                 <Td>{(count += 1)}</Td>
 

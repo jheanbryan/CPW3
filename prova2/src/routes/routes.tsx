@@ -5,7 +5,7 @@ import ProtectedRoute from "../components/ProtectedRoute";
 import Logout from "../pages/Logout";
 import NotFound from "../pages/NotFound";
 import Search from "../pages/Search";
-import MoreInfo from "../pages/MoreInfo";
+import MoreInfo from "../pages/CryptoDetails";
 
 export const routes: RouteObject[] = [
   {
@@ -37,7 +37,7 @@ export const routes: RouteObject[] = [
     ),
   },
   {
-    path: "/crypto/:id",
+    path: "/searchCrypt/:id",
     element: (
       <ProtectedRoute>
         <MoreInfo />

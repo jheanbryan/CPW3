@@ -25,7 +25,7 @@ export const StyledLink = styled(Link)`
   margin: 0 1rem;
   transition: color 0.3s, border-bottom 0.3s;
   border-bottom: 2px solid transparent;
-
+  text-align: center;
   &:hover {
     color: ${hoverColor};
     border-bottom: 2px solid ${hoverColor};

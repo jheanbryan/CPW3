@@ -3,6 +3,7 @@ import { CryptoCard, CryptoDescription, InputItems, InputSearch, Item, MainConta
 import Header from "../../components/Header/index";
 import { Crypto, getCryptoOptions } from '../../services/CryptoOptions';
 import { getCriptoDetails } from '../../services/CriptoDetails';
+import { useNavigate } from "react-router-dom";
 
 const Search = () => {
     const [cryptoOptions, setCryptoOptions] = useState<Crypto[]>([]); // lista de criptosDisponiveis
@@ -10,6 +11,8 @@ const Search = () => {
     const [showList, setShowList] = useState(false); // lista de criptos para mostrar
     const [selectedCrypto, setSelectedCrypto] = useState<Crypto | null>(null); // guardar cripto clickada
     const [cryptoDetails, setCryptoDetails] = useState<any>(null); // estado para detalhes da cripto
+    const navigate = useNavigate();
+
 
     // Carregar itens do input
     useEffect(() => {
@@ -19,6 +22,12 @@ const Search = () => {
         };
 
         fetchCryptoOptions();
+
+        //local Storage para a crypto details
+        const storedCryptoDetails = localStorage.getItem('cryptoDetails');
+        if (storedCryptoDetails) {
+            setCryptoDetails(JSON.parse(storedCryptoDetails));
+        }
     }, []);
 
     // Filtra as criptos com base no termo digitado
@@ -49,9 +58,14 @@ const Search = () => {
     };
 
     const getCryptoDetailsById = async (id: string) => {
-        const details = await getCriptoDetails(id); // Aqui você pega os detalhes da cripto
+        const details = await getCriptoDetails(id);
         console.log(details);
-        setCryptoDetails(details); // Armazenando os detalhes da cripto no estado
+        setCryptoDetails(details);
+        localStorage.setItem('cryptoDetails', JSON.stringify(details));
+    };
+
+    const goToDetailsPage = (cryptoName: string) => {
+        navigate(`/searchCrypt/${cryptoName}`); 
     };
 
     return (
@@ -80,12 +94,14 @@ const Search = () => {
                 )}
 
                 {selectedCrypto && cryptoDetails && (
-                    <CryptoCard>
-                         <CryptoImage src={cryptoDetails.image} alt={selectedCrypto.name} />
-
+                    <CryptoCard 
+                        onClick={() => goToDetailsPage(selectedCrypto.id)} 
+                    >
+                        <CryptoImage src={cryptoDetails.image} alt={selectedCrypto.name} />
                         <CryptoDescription>
-                            <CryptoName>{selectedCrypto.name}</CryptoName>
-                            <p>R$ {cryptoDetails.current_price}</p>
+
+                        <CryptoName>{selectedCrypto.name}</CryptoName>
+                        <p>R$ {cryptoDetails.current_price}</p>
                         </CryptoDescription>
                     </CryptoCard>
                 )}

@@ -11,6 +11,10 @@ export const Title = styled.h1`
   text-align: center;
   font-size: 1.8rem;
   margin-bottom: 20px;
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem; 
+  }
 `;
 
 export const MainContainer = styled.div`
@@ -22,7 +26,7 @@ export const MainContainer = styled.div`
   width: 100%;
   gap: 15px;
   margin-inline: auto;
-  padding: 20px;
+  padding: 1rem;
 `;
 
 export const Table = styled.table`
@@ -34,6 +38,7 @@ export const Table = styled.table`
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+
 `;
 
 export const Thead = styled.thead`
@@ -41,15 +46,18 @@ export const Thead = styled.thead`
 `;
 
 export const Th = styled.th`
-  padding: 15px;
-  text-align: left;
+  padding: 1rem;
   font-size: 1rem;
   font-weight: bold;
   border-bottom: 2px solid ${textColor};
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem; 
+  }
 `;
 
 export const Tr = styled.tr`
-  cursor: pointer;
+  text-align: center;
   transition: background-color 0.3s;
 
   &:hover {
@@ -61,7 +69,12 @@ export const Td = styled.td`
   padding: 12px;
   border-bottom: 1px solid ${textColor};
   text-align: left;
-  font-size: 0.95rem;  
+  font-size: 0.95rem;
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;  // Ajusta o tamanho da fonte para telas menores
+    padding: 8px;      // Ajusta o padding para telas menores
+  }
 `;
 
 export const Img = styled.img`
@@ -69,6 +82,11 @@ export const Img = styled.img`
   height: 32px;
   border-radius: 50%;
   margin-right: 8px;
+
+  @media (max-width: 768px) {
+    width: 24px;  
+    height: 24px;
+  }
 `;
 
 export const CryptoName = styled.span`
@@ -78,4 +96,9 @@ export const CryptoName = styled.span`
 export const DivLine = styled.div`
   display: flex;
   align-items: center;
+  
+  @media (max-width: 768px) {
+    flex-direction: column; // Muda a direção dos itens em telas menores
+    align-items: flex-start; // Alinha os itens à esquerda em telas menores
+  }
 `;
