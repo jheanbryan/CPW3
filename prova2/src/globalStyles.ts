@@ -10,5 +10,6 @@ export const MyGlobalStyles = createGlobalStyle`
         font-size: 16px; 
         background-color: #2f343f;
         color: #fff;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
 `;

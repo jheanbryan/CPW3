@@ -13,16 +13,16 @@ export class CryptoDetails {
 
   constructor(data: any) {
     this.name = data.name || "Nome não disponível";
-    this.image = data.image?.large || ""; // Usando imagem em tamanho grande se disponível
+    this.image = data.image?.large || data.image;
     this.symbol = data.symbol || "Símbolo não disponível";
     this.description = data.description?.en || "Descrição não disponível";
-    this.links = data.links?.homepage || []; // Caso não haja links, atribui um array vazio
+    this.links = data.links?.homepage || []; 
     this.country_origin = data.country_origin || "País de origem não disponível";
     this.genesis_date = data.genesis_date || "Data de origem não disponível";
-    this.current_price = data.market_data?.current_price?.brl || 0; // Usando 0 caso o preço não esteja disponível
-    this.market_cap = data.market_data?.market_cap?.brl || 0; // Usando 0 caso a market cap não esteja disponível
-    this.market_cap_rank = data.market_cap_rank || 0; // Usando 0 caso o rank não esteja disponível
-    this.fully_diluted_valuation = data.market_data?.fully_diluted_valuation?.brl || 0; // Usando 0 caso a fully diluted valuation não esteja disponível
+    this.current_price = data.market_data?.current_price?.brl || 0;
+    this.market_cap = data.market_data?.market_cap?.brl || 0;
+    this.market_cap_rank = data.market_cap_rank || 0; 
+    this.fully_diluted_valuation = data.market_data?.fully_diluted_valuation?.brl || 0;
   }
 };
 

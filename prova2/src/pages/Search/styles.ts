@@ -1,14 +1,14 @@
 import styled from "styled-components";
 
-const primaryColor = "#1C1E26";
-const secondaryColor = "#2a2d37";
-const textColor = "#fff";
+//const primaryColor = "#1C1E26";
+//const secondaryColor = "#2a2d37";
+//const textColor = "#fff";
 const borderColor = "#fff";
 const backgroundColorLight = "#ffffff";
 const backgroundColorDark = "#000";
 const hoverBackgroundColor = "#c0c0c0";
-const paddingSize = "0.8rem 1.2rem";
-const fontSize = "1rem";
+//const paddingSize = "0.8rem 1.2rem";
+//const fontSize = "1rem";
 const borderRadius = "5px";
 
 export const MainContainer = styled.div`
@@ -137,4 +137,8 @@ export const CryptoDescription = styled.div`
     flex-direction: column;
     justify-content: center;
     color: ${backgroundColorDark};
+`;
+
+export const CryptoName = styled.h2`
+    font-size: 1.2rem;
 `;

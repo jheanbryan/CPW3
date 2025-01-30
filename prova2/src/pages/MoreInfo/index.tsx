@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect } from "react";
 
 import { MainContainer } from "./styles";
 
 import Header from "../../components/Header/index";
-import { useNavigate } from "react-router-dom";
+//import { useNavigate } from "react-router-dom";
 
 const MoreInfo = () => {
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
 
   useEffect(() => {}, []);
   return (

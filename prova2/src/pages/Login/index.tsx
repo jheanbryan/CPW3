@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Bars } from "react-loader-spinner";
-import { GoogleAuthProvider, GithubAuthProvider, signInWithPopup, Auth, UserCredential } from "firebase/auth";
+import { GoogleAuthProvider, GithubAuthProvider, signInWithPopup, UserCredential } from "firebase/auth";
 
 import { UserContext } from "../../Context/UserContext";
 import google from "../../assets/img/google.png";
